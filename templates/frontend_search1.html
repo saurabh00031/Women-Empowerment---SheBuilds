@@ -1,0 +1,358 @@
+{% extends 'frontend_base.html' %}
+{% load static %}
+
+{% block css %}
+
+  /*Google Font*/
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
+
+
+*{
+    box-sizing: border-box;
+}
+
+header,
+section{
+    overflow-x:hidden ;
+}
+
+:root {
+    --Sniglet-font: "Sniglet", cursive;
+    --Rubik: "Rubik", cursive;
+    --Patua: "Patua One", cursive;
+    --Lobster: "lobster", cursive;
+    --light-black: #2e2c2caf;
+    --bggradient: linear-gradient(to bottom, #b524dd, #fd62c2);
+    --light-gray: rgba(255, 255, 255, 0.877);
+  }
+
+  header a {
+    font-family: var(--Sniglet-font);
+    font-size: 0.9em;
+    color: whitesmoke;
+  }
+
+  header{
+    background: #dd2476;
+    background: var(--bggradient);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  header .nav-item:last-child {
+    padding-right: 10.5em;
+  }
+  
+  header .nav-item {
+    padding: 0.9em;
+  }
+
+  header .navbar-brand {
+    padding-left: 8rem;
+  }
+  
+  header .nav-link:hover {
+    color: black;
+  }
+  
+  header .row .col-md-7 {
+    padding: 22vmin 1vmin;
+    padding-bottom: 35vmin;
+  }
+  
+  header .row .col-md-5 {
+    padding: 4.2vmin 1vmin;
+  }
+  
+  header .row .col-md-5 img {
+    width: 90%;
+  }
+  
+  header {
+    background: #ff512f;
+    /* fallback for old browsers */
+    background: var(--bggradient);
+  }
+  
+  header .container .col-md-7 {
+    /* font-family: "Rubik", sans-serif; */
+    font-family: "Lobster",sans-serif;
+  }
+  
+  header .container .col-md-7 h6 {
+    padding: 1vmin;
+    letter-spacing: 4px;
+  }
+  
+  header .container .col-md-7 h1 {
+    font-size: 8.5vmin;
+    font-weight: bold;
+    padding: 0.1em 0em;
+  }
+  
+  header .container .col-md-7 p {
+    padding: 1vmin 5vmin;
+  }
+  
+  .primary-btn {
+    border-radius: 30px;
+    font-weight: bold;
+  }
+
+
+  
+
+
+    
+  footer {
+    background: rgba(0, 0, 0, 0.815);
+    overflow-x: hidden;
+    padding: 14vmin 18vmin;
+  }
+  
+  footer p > span {
+    color: #ff512f;
+  }
+  
+  footer input {
+    border: none !important;
+  }
+  
+  footer input::placeholder {
+    color: white !important;
+  }
+  
+  footer .input-group .input-group-text {
+    background: var(--bggradient);
+    border: none;
+  }
+  
+  footer .column i {
+    color: #dd2476;
+  }
+  
+  /* It is Adjacent sibling combinator */
+  
+  footer .column i + i {
+    padding: 0 0.5em;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.815);
+    z-index: 9999;
+    transition: all 1.5s ease;
+  }
+
+{% endblock css %}
+
+
+
+
+
+{% block nav %}
+
+<header>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'frontend_home' %}"><i class="fa-solid fa-crown fa-2x mx-3"></i> SheBuilds</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+              <i class="fas fa-align-right text-light"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mr-auto"> </div>
+              <ul class="navbar-nav">
+                 <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'sginpg_user' %}">Mentor info <span class="sr-only">(current)</span></a>
+                </li>
+                {% if not request.user.is_authenticated %}
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'sg_user' %}">User signup</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'sg_mentor' %}">Mentor signup</a>
+                </li> 
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'sgin_user' %}">User login</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'sgin_mentor' %}">Mentor login</a>
+                </li>  
+          
+                {% endif %}
+
+                {% if  request.user.is_authenticated %}
+               
+               <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">Chats room</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact_us' %}">Contact</a>
+                </li>
+          
+                {% endif %}
+{% comment %} 
+                 <li class="nav-item">
+                  <a class="nav-link" href="#scholarships">Scholarship</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#womenrights">Women Rights</a>
+                </li>
+
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#mentorships">Mentorship</a>
+                </li> {% endcomment %}
+          
+          
+
+
+                 
+
+                <!-- <li class="nav-item dropdown">
+                  <div class="dropdown">
+                    <a href="#" class="nav-link">Pages</a>
+                    <div class="dropdown-content">
+                         <a href="#">About</a>
+                         <a href="#">Help </a>
+                    </div>
+                  </div>
+                </li> -->
+
+                  {% if request.user.is_mentor %}
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'sginpg_mentor' %}">Update profile</a>
+                </li>
+                  {% endif %}
+
+
+                    
+
+                {% if request.user.is_user %}
+              
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'addPost' %}">Add Post</a>
+                </li>
+                 
+
+                 
+                
+
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'my_posts' %}">My posts</a>
+                </li>
+
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}">Feeds</a>
+                </li>
+
+                 {% endif %}
+
+                  <li class="nav-item">
+                  <a class="nav-link" href="{% url 'logout_user' %}" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <b> <i class="fas fa-user-alt"></i>   {{ request.user }}</b>
+                  </a>
+                 </li>
+
+              </ul>
+            </div>
+          </nav>
+    </div>
+
+</header>
+
+
+{% endblock nav %}
+
+
+
+{% block body  %}
+
+
+{% for message in messages %}
+<div class="alert alert-info alert-dismissible fade show" style="position:absolute;z-index:20;width:100%;" role="alert">
+  <strong> {{ message }} </strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
+
+
+
+{% if ct %}
+
+
+
+
+
+
+  {% else %}
+
+  <h3><center>No results found</center></h3>
+  {% endif %}
+  
+ 
+
+  <h3 class="mt-5"><center>Search found</center></h3>
+ 
+
+
+  <div class="container align-content-center mt-5">
+
+   {% for i in ct %}
+  <div class="card text-white bg-info mb-3" style="max-width: 90rem;">
+    <div class="card-header">Full Name : {{i.full_Name}}</div>
+    <div class="card-body">
+      <p class="card-title">City :  {{i.city}}</p>
+          <p class="card-title">country :  {{i.country}}</p>
+          <p class="card-title">state :  {{i.states}}</p>
+          <p class="card-title">Address : {{i.address}}</p>
+          <p class="card-text">Phone: {{i.phone}}</p>
+          <p class="card-text">Field of interest: {{i.field_of_interest}}</p>
+          <p class="card-text">Company Name: {{i.company_name}}</p>
+          <p class="card-text">Experience: {{i.experience_yrs}}</p>
+          <p class="card-text">Net Worth: {{i.total_earnings_by}}</p>
+          <p class="card-text">Description: {{i.description_in_short}}</p>
+          <p class="card-text">Email: {{i.email}}</p>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  {% endfor %}
+
+
+ 
+
+
+
+{% endblock body %}
+

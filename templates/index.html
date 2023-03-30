@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile-style.css">
+    <script src="https://kit.fontawesome.com/3b36a04144.js" crossorigin="anonymous"></script>
+    <style>
+        /*Google Font*/
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
+
+
+*{
+    box-sizing: border-box;
+}
+
+header,
+section{
+    overflow-x:hidden ;
+}
+
+:root {
+    --Sniglet-font: "Sniglet", cursive;
+    --Rubik: "Rubik", cursive;
+    --Patua: "Patua One", cursive;
+    --Lobster: "lobster", cursive;
+    --light-black: #2e2c2caf;
+    --bggradient: linear-gradient(to bottom, #b524dd, #fd62c2);
+    --light-gray: rgba(255, 255, 255, 0.877);
+  }
+
+  header a {
+    font-family: var(--Sniglet-font);
+    font-size: 0.9em;
+    color: whitesmoke;
+  }
+
+  header{
+    background: #dd2476;
+    background: var(--bggradient);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  header .nav-item:last-child {
+    padding-right: 10.5em;
+  }
+  
+  header .nav-item {
+    padding: 0.9em;
+  }
+
+  header .navbar-brand {
+    padding-left: 8rem;
+  }
+  
+  header .nav-link:hover {
+    color: black;
+  }
+  
+  header .row .col-md-7 {
+    padding: 22vmin 1vmin;
+    padding-bottom: 35vmin;
+  }
+  
+  header .row .col-md-5 {
+    padding: 4.2vmin 1vmin;
+  }
+  
+  header .row .col-md-5 img {
+    width: 90%;
+  }
+  
+  header {
+    background: #ff512f;
+    /* fallback for old browsers */
+    background: var(--bggradient);
+  }
+  
+  header .container .col-md-7 {
+    /* font-family: "Rubik", sans-serif; */
+    font-family: "Lobster",sans-serif;
+  }
+  
+  header .container .col-md-7 h6 {
+    padding: 1vmin;
+    letter-spacing: 4px;
+  }
+  
+  header .container .col-md-7 h1 {
+    font-size: 8.5vmin;
+    font-weight: bold;
+    padding: 0.1em 0em;
+  }
+  
+  header .container .col-md-7 p {
+    padding: 1vmin 5vmin;
+  }
+  
+  .primary-btn {
+    border-radius: 30px;
+    font-weight: bold;
+  }
+
+
+  /* section 1 */
+
+  .section-1 {
+    padding: 20vmin 0vmin;
+  }
+  
+  .section-1 .row .col-md-6 .pray img {
+    opacity: 0.8;
+    width: 80%;
+    border-radius: 0.2em;
+  }
+  
+  .section-1 .row .col-md-6:last-child {
+    position: relative;
+  }
+  
+  .section-1 .row .col-md-6 .panel {
+    position: absolute;
+    top: 7vmin;
+    left: -18vmin;
+    background: white;
+    border-radius: 3px;
+    text-align: left;
+    padding: 13vmin 5vmin 13vmin 10vmin;
+    box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+    font-family: var(--Rubik);
+    z-index: 1;
+  }
+  
+  .section-1 .row .col-md-6 .panel h1 {
+    font-weight: bold;
+    padding: 0.4em 0;
+    font-size: 2em;
+  }
+  
+  .section-1 .row .col-md-6 .panel p {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  /*  Section 2  */
+
+.cover {
+    width: 100%;
+    height: 55vmin;
+    background: url("../assets/pexels-photo-452738.jpeg");
+    background-position: -24rem -19rem;
+    background-size: 150%;
+    position: relative;
+  }
+  
+  .cover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+  
+  .cover .content {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding-top: 19vmin;
+  }
+  
+  .cover .content > h1 {
+    font-family: var(--Patua);
+    font-size: 6vmin;
+    color: whitesmoke;
+  }
+  
+  .cover .content > p {
+    font-family: var(--Rubik);
+    font-size: 2vmin;
+    color: #e5e5e5;
+  }
+  
+  .numbers .rect {
+    position: relative;
+    z-index: 1;
+    background: white;
+    width: 17rem;
+    height: 12rem;
+    padding-top: 3.5vmin;
+    margin: 1rem;
+    border-radius: 0.5em;
+    box-shadow: 1px 2px 50px 0px rgba(255, 0, 0, 0.349);
+  }
+  
+  .numbers {
+    margin-top: -15vmin;
+  }
+  
+  .numbers .rect h1 {
+    font-size: 5rem;
+    color: tomato;
+  }
+  
+  .numbers .rect > p {
+    font-family: var(--Patua);
+  }
+  
+  .rights > h1 {
+    padding-top: 15vmin;
+    padding-bottom: 0.1em;
+    /* font-family: var(--Lobster); */
+  }
+  
+  .rights > p {
+    color: var(--light-black);
+    font-size: 3vmin;
+    padding-bottom: 10vmin;
+  }
+  
+  .rights .cards .card {
+    width: 22rem;
+    margin: 3vmin 3vmin;
+  }
+  
+  .cards div {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cards .title {
+    background: rgba(208, 241, 241, 0.199);
+    padding: 1.4em 2.5em;
+    font-size: 2vmin;
+  }
+  
+  .card .card-text {
+    padding: 2.5rem 3rem;
+    color: var(--light-black);
+  }
+  
+  .card-body .pricing {
+    background: rgba(208, 241, 241, 0.199);
+    border-top-right-radius: 170px;
+    border-top-left-radius: 170px;
+  }
+  
+  .card-body .pricing > h1 {
+    font-size: 10vmin;
+    padding: 1em 0.5em;
+  }
+  
+  
+  /* Section 4 */
+
+.section-4 .container h1 {
+    font-size: 6vmin;
+    padding-top: 14vmin;
+  }
+  
+  .section-4 .team {
+    padding: 10vmin 4vmin;
+  }
+  
+  .section-4 .card {
+    width: 22em;
+    margin-top: 10vmin;
+  }
+  
+  .section-4 .card .card-text {
+    padding: 0.5em;
+  }
+  
+  .section-4 .card-body > a {
+    font-size: 1.5em;
+  }
+  
+  .section-4 .carousel-item {
+    padding-left: 3rem;
+  }
+  
+  .border-radius {
+    border-radius: 340px;
+    width: 60%;
+  }
+  
+  footer {
+    background: rgba(0, 0, 0, 0.815);
+    overflow-x: hidden;
+    padding: 14vmin 18vmin;
+  }
+  
+  footer p > span {
+    color: #ff512f;
+  }
+  
+  footer input {
+    border: none !important;
+  }
+  
+  footer input::placeholder {
+    color: white !important;
+  }
+  
+  footer .input-group .input-group-text {
+    background: var(--bggradient);
+    border: none;
+  }
+  
+  footer .column i {
+    color: #dd2476;
+  }
+  
+  /* It is Adjacent sibling combinator */
+  
+  footer .column i + i {
+    padding: 0 0.5em;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.815);
+    z-index: 9999;
+    transition: all 1.5s ease;
+  }
+
+  /* Scholarship */
+
+  .main .card .row{
+    box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+  }
+  @media only screen and (max-width: 768px) {
+    header .navbar-brand {
+      padding-left: 1rem;
+    }
+    .section-1 .row .col-md-6 .panel {
+      position: initial;
+      width: initial;
+      height: initial;
+    }
+    .section-2 .cover {
+      background-position: -25vmin -10vmin;
+    }
+    .numbers .rect {
+      width: 10rem;
+      height: 8rem;
+    }
+    .numbers .rect h1 {
+      font-size: 2rem;
+    }
+  
+    .section-3 {
+      height: inherit;
+      padding: 10vmin !important;
+    }
+    .section-3 .row h1 {
+      padding: 6vmin 4vmin;
+    }
+    .section-3 .platform .col-md-6 {
+      text-align: center !important;
+    }
+    .section-3 .desktop i {
+      font-size: 8vmin;
+    }
+    .section-4 .carousel-item {
+      padding-left: 0.6rem;
+    }
+    footer .row .col-md-2 {
+      margin-top: 8vmin;
+    }
+  }
+  
+  /* screen size 375px */
+  
+  @media only screen and (max-width: 375px) {
+    .section-4 .card {
+      width: 18em;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .section-4 .carousel-inner {
+      margin-left: -4vmin;
+    }
+  }
+    </style>
+</head>
+<body>
+    
+<header>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-crown fa-2x mx-3"></i> SheBuilds</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+              <i class="fas fa-align-right text-light"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mr-auto"> </div>
+              <ul class="navbar-nav">
+                 <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'sginpg_user' %}">Mentor info <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Sponsors</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                  <div class="dropdown">
+                    <a href="#" class="nav-link">Pages</a>
+                    <div class="dropdown-content">
+                         <a href="#">About</a>
+                         <a href="#">Help </a>
+                    </div>
+                  </div>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="scholarship.html">Scholarship</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Women Rights</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+              <h3>TOWARDS</h3>
+                <h3>WOMEN-EMPOWERMENT</h3>
+                <h1>Here we go!!</h1>
+                <p>"I raise up my voice-not so I can shout, but so that those without a voice can be heard...we cannot succeed when half of us are held back."</p>
+                
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="images/wommen/Woman.png" alt="woman">
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="section-1">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="pray"></div>
+                    <img src="images/wommen/popular-scholarships-for-women.jpeg" alt="pray">
+                </div>
+                <div class="col-md-6">
+                    <div class="panel text-left">
+                        <h1>Looking for Sponsors?</h1>
+                        <p class="pt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perferendis sunt autem tenetur non cupiditate quo molestiae dolorem et est!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestiae exercitationem nulla necessitatibus dolorum vero magni aut quod, quisquam animi.</p>
+                        <b class="btn btn-light px-5 py-2" >Know More</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-2 container-fluid p-0">
+      <div class="cover">
+        <div class="content text-center">
+          <h1>Know about Scholarships</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, harum?</p>
+        </div>
+      </div>
+
+      <div class="container-fluid text-center">
+        <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+          <div class="rect">
+            <h2>Check Out</h2>
+            <b class="btn btn-light px-5 py-2">Know More</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="rights text-center">
+        <h1>Know About the Women Rights</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, odio?</p>
+        <div class="cards">
+          <div class="d-flex flex-row justify-content-center flex-wrap">
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">Check this Out!!</h5>
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing.
+                </p>
+                <a href="#" class="btn btn-dark px-5 py-2 mb-5">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+<footer>
+  <div class="conatiner-fluid p-0">
+    <div class="row text-left">
+      <div class="col-md-7 col-md-7">
+        <h1 class="text-light">About Us</h1>
+        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vitae cum rerum incidunt tenetur corporis voluptatem magnam amet perferendis delectus?</p>
+        <p class="pt-4 text-muted">
+          Copyright All rights reserved | This template is made by
+          <span>Name yet to be decided</span>
+        </p>
+      </div>
+      <div class="col-md-3 col-md-3"></div>
+      <div class="col-md-2 col-sm-12">
+        <h4 class="text-light">Follow Us</h4>
+        <p class="text-muted">Let us be social</p>
+        <div class="cloumn">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+        </div> 
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.slim.min.js" integrity="sha512-jxwTCbLJmXPnV277CvAjAcWAjURzpephk0f0nO2lwsvcoDMqBdy1rh1jEwWWTabX1+Grdmj9GFAgtN22zrV0KQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
